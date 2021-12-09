@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.7
 # -*- coding: utf-8 -*-
 import copy
 import argparse
@@ -6,6 +6,9 @@ import rospy
 from mediapipe_ros.msg import Hand
 from sensor_msgs.msg import Image 
 from cv_bridge import CvBridge
+
+import sys
+print(sys.path)
 
 import cv2 as cv
 import numpy as np

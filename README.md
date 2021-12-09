@@ -16,6 +16,13 @@ We need `python3.7` to run this package
 $ sudo apt-get install python3.7 python3.7-dev python3.7-venv
 ```
 
+### Install mediapipe
+
+```
+$ python3.7 -m pip install mediapipe
+```
+
+
 ### Workspace build (melodic)
 ```
 source /opt/ros/melodic/setup.bash
@@ -31,3 +38,24 @@ catkin init
 catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.7m.so
 catkin build
 ```
+
+### Usage
+
+
+
+#### In the first terminal:
+```
+$ roslaunch usb_cam usb_cam-test.launch
+```
+
+#### In the second terminal:
+```
+$ source ~/mediapipe_ws/devel/setup.bash
+$ rosrun mediapipe_ros hand_gesture_ros.py
+```
+
+#### In the thid terminal:
+```
+$ rqt_image_view 
+```
+choose `/cv_hand_sense`

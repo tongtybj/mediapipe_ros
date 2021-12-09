@@ -20,10 +20,8 @@
   <run_depend>python3-setuptools</run_depend>
   <run_depend>resource_retriever</run_depend>
 
-
-  <!-- The export tag contains other, unspecified, tags -->
   <export>
-    <!-- Other tools can request additional information be placed here -->
-
+    <pip_requirements>requirements.txt</pip_requirements>
   </export>
+
 </package>
