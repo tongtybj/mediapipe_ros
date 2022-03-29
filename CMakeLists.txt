@@ -36,6 +36,12 @@ catkin_generate_virtualenv(
   CHECK_VENV FALSE
 )
 
+file(GLOB SCRIPTS_FILES "scripts/*.py")
+catkin_install_python(
+  PROGRAMS ${SCRIPTS_FILES}
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  )
+
 
 install(FILES requirements.in requirements.txt
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

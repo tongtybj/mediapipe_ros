@@ -4,27 +4,13 @@ ROS package for [Mediapipe](https://google.github.io/mediapipe/) in Linux Env th
 
 ## Environment
 - Ubuntu 18.04 + Melodic
-
-## Notice
-We need `python3.7` to run this package
+- Ubuntu 20.04 + Noetic
 
 ## Setup
 
-### Install `python3.7` and related dependenceis
-
-```
-$ sudo apt-get install python3.7 python3.7-dev python3.7-venv
-```
-
-### Install mediapipe
-
-```
-$ python3.7 -m pip install mediapipe
-```
-
-
 ### Workspace build (melodic)
-```
+```bash
+sudo apt-get install python3.7 python3.7-dev python3.7-venv
 source /opt/ros/melodic/setup.bash
 mkdir -p ~/mediapipe_ws/src
 cd ~/mediapipe_ws/src
@@ -39,8 +25,20 @@ catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/inc
 catkin build
 ```
 
-### Usage
+### Workspace build (Noetic)
+```bash
+source /opt/ros/noetic/setup.bash
+mkdir -p ~/mediapipe_ws/src
+cd ~/mediapipe_ws/src
+git clone https://github.com/tongtybj/mediapipe_ros.git
+wstool init
+rosdep install --from-paths . --ignore-src -y -r
+cd ~/mediapipe_ws
+catkin init
+catkin build
+```
 
+### Usage
 
 
 #### In the first terminal:

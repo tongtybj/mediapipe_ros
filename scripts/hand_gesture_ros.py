@@ -8,7 +8,6 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 import sys
-print(sys.path)
 
 import cv2 as cv
 import numpy as np
@@ -335,7 +334,7 @@ class Publishsers:
             else:
                 is_finger_open.append(0)
 
-        print(is_finger_open)
+        #print(is_finger_open)
         if(is_finger_open == [1, 1, 1, 1, 1]):
             gesture = 'release'
 
